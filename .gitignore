@@ -1,5 +1,6 @@
 .idea
-cdn
+cdn/dioramaz/*
+!cdn/dioramaz/.gitkeep
 dioramaz/public/build/manifest.json
 dioramaz/public/build/assets/*
 !dioramaz/public/build/assets/.gitkeep
