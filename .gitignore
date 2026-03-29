@@ -1,0 +1,15 @@
+.idea
+cdn
+dioramaz/public/build/manifest.json
+dioramaz/public/build/assets/*
+!dioramaz/public/build/assets/.gitkeep
+dioramaz/public/data/catalogues/*
+!dioramaz/public/data/catalogues/.gitkeep
+dioramaz/public/imgs/*
+!dioramaz/public/imgs/.gitkeep
+dioramaz/public/buy-*
+dioramaz/public/pages-*
+dioramaz/public/sitemap.xml
+dioramaz/storage/pages/*
+!dioramaz/storage/pages/.gitkeep
+.env*

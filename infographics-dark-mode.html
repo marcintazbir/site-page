@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>History & Modeler's Guide — M4 Sherman Infographic</title>
+  <meta name="description" content="Infographic-style guide to the M4 Sherman tank: history, combat use, major WWII operations, key variants for modelers, camouflage schemes, and diorama inspiration. SEO-friendly pure HTML layout."/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- GEO metadata for light geotargeting (example: Ireland / Dublin) -->
+  <meta name="geo.region" content="IE-D" />
+  <meta name="geo.placename" content="Dublin" />
+  <meta name="geo.position" content="53.3498;-6.2603" />
+  <meta name="ICBM" content="53.3498, -6.2603" />
+  <!-- Open Graph minimal -->
+  <meta property="og:title" content="M4 Sherman — History & Modeler's Infographic" />
+  <meta property="og:description" content="History, combat use, variants, camo schemes and diorama ideas for the M4 Sherman tank." />
+  <meta name="author" content="Model Builder Resource" />
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#eab308;
+      --muted:#9aa4b2;
+      --panel:#0f172c;
+      --glass: rgba(255,255,255,0.03);
+      --accent-2:#06b6d4;
+      --maxw:1100px;
+      --gap:18px;
+      --radius:14px;
+      font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+      color: #e6eef6;
+    }
+
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071122 0%, #041021 60%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--maxw);
+      margin:0 auto;
+    }
+
+    header.site-header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:72px;height:72px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#ff7a18);
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 6px 20px rgba(0,0,0,0.6);
+      flex:0 0 72px;
+    }
+    .logo svg{filter:drop-shadow(0 3px 8px rgba(0,0,0,0.45))}
+    .title{
+      line-height:1;
+    }
+    .title h1{margin:0;font-size:20px;letter-spacing:0.2px}
+    .title p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+
+    /* grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:var(--gap);
+      align-items:start;
+    }
+
+    /* left column: main infographic */
+    .main{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+      min-width:0;
+    }
+
+    /* compact columns inside */
+    .two-cols{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .section{
+      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border-radius:12px;
+      padding:12px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+    .section h2{
+      margin:0 0 8px 0;
+      font-size:14px;
+      color:var(--accent);
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .meta{
+      font-size:12px;color:var(--muted); margin-bottom:8px;
+    }
+
+    /* timeline */
+    .timeline{
+      display:flex;flex-direction:column;gap:10px;
+    }
+    .event{
+      display:flex;gap:10px;align-items:flex-start;
+    }
+    .dot{
+      width:14px;height:14px;border-radius:50%;
+      background:var(--accent);
+      flex:0 0 14px;margin-top:4px;
+      box-shadow:0 2px 8px rgba(234,179,8,0.12);
+    }
+    .event p{margin:0;font-size:13px;color:#dbe9f9}
+
+    /* variants list compact cards */
+    .variants{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:10px;
+    }
+    .variant{
+      border-radius:10px;padding:10px;background:var(--glass);
+      min-height:70px;
+    }
+    .variant h3{margin:0;font-size:13px;color:#fff}
+    .variant p{margin:6px 0 0;color:var(--muted);font-size:12px}
+
+    /* camo swatches */
+    .swatches{display:flex;flex-wrap:wrap;gap:8px}
+    .swatch{width:86px;height:44px;border-radius:8px;padding:6px;font-size:11px;color:#072;display:flex;align-items:flex-end;justify-content:center;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .swatch small{color:rgba(255,255,255,0.85);font-weight:600}
+
+    /* diorama ideas */
+    .ideas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .idea{padding:10px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));font-size:13px;color:var(--muted)}
+
+    /* right column: quick stats & callouts */
+    aside.side{
+      position:relative;
+      display:flex;flex-direction:column;gap:12px;
+    }
+    .card{
+      background:linear-gradient(180deg,#051426 0%, #071328 100%);
+      border-radius:12px;padding:14px;box-shadow:0 8px 30px rgba(0,0,0,0.6);
+    }
+    .stat{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;margin-bottom:10px;
+    }
+    .stat strong{font-size:18px;color:var(--accent)}
+    .badge{font-size:12px;padding:6px 8px;border-radius:10px;background:rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* progress bar */
+    .bar{height:10px;background:rgba(255,255,255,0.04);border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px}
+
+    footer{margin-top:14px;font-size:12px;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr; }
+      .two-cols{grid-template-columns:1fr}
+      .variants{grid-template-columns: 1fr 1fr}
+      .ideas{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header class="site-header" aria-label="M4 Sherman infographic header">
+      <div class="logo" aria-hidden="true">
+        <!-- simple tank glyph -->
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="11" width="22" height="5" rx="2" fill="rgba(255,255,255,0.14)"/>
+          <rect x="5" y="7" width="8" height="5" rx="1.2" fill="white" opacity="0.18"/>
+          <rect x="15" y="9" width="6" height="2" rx="0.8" fill="white" opacity="0.18"/>
+          <rect x="17" y="8" width="6" height="1.5" rx="0.6" fill="#071426"/>
+        </svg>
+      </div>
+      <div class="title">
+        <h1>M4 Sherman — History & Modeler's Infographic</h1>
+        <p>Compact, SEO-friendly single-file HTML infographic for modelers & hobbyists</p>
+      </div>
+    </header>
+
+    <div class="grid" aria-live="polite">
+      <main class="main" aria-labelledby="main-heading">
+        <h2 id="main-heading" style="font-size:16px;margin:0 0 12px;color:var(--accent)">At a Glance</h2>
+
+        <div class="two-cols" role="region" aria-label="History and first combat">
+          <!-- History -->
+          <section class="section" aria-labelledby="history">
+            <h2 id="history">History of the M4 Sherman</h2>
+            <p class="meta">Designed 1941 • First production Feb 1942 • Mass-production focus</p>
+            <div class="timeline" aria-hidden="false">
+              <div class="event">
+                <div class="dot" aria-hidden="true"></div>
+                <div>
+                  <p><strong>Designed:</strong> 1941 — replacement for the M3 Lee/Grant.</p>
+                </div>
+              </div>
+              <div class="event">
+                <div class="dot" aria-hidden="true"></div>
+                <div>
+                  <p><strong>Production:</strong> First rolled out Feb 1942 — welded or cast hulls, 75 mm main gun, reliable mechanics.</p>
+                </div>
+              </div>
+              <div class="event">
+                <div class="dot" aria-hidden="true"></div>
+                <div>
+                  <p><strong>Built for scale:</strong> Mass production — >49,000 by war’s end (one of history’s most-produced tanks).</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- First Combat Use -->
+          <section class="section" aria-labelledby="combat">
+            <h2 id="combat">First Combat Use</h2>
+            <p class="meta">British &amp; US combat introduction — late 1942</p>
+            <p style="font-size:13px;color:#dbe9f9;margin:0 0 8px">
+              <strong>El Alamein</strong> — October 1942 was the Sherman’s combat debut with British forces. Shortly after, U.S. units used it in <strong>Operation Torch</strong> (Nov 1942).
+            </p>
+            <div class="bar" aria-hidden="true" style="margin-top:8px">
+              <i style="width:56%"></i>
+            </div>
+            <p class="meta" style="margin-top:8px">Early adoption across Allied armies</p>
+          </section>
+        </div>
+
+        <!-- Major WWII operations -->
+        <section class="section" style="margin-top:12px" aria-labelledby="ops">
+          <h2 id="ops">Major WWII Operations</h2>
+          <p class="meta">Theatre coverage: North Africa, Italy, Western Europe, Netherlands, Ardennes</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px">
+            <div style="flex:1 1 220px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));padding:10px;border-radius:10px">
+              <strong>North Africa</strong>
+              <div style="font-size:13px;color:var(--muted);margin-top:6px">El Alamein • Tunisia — desert operations & dust-camouflage</div>
+            </div>
+            <div style="flex:1 1 220px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));padding:10px;border-radius:10px">
+              <strong>Italy</strong>
+              <div style="font-size:13px;color:var(--muted);margin-top:6px">Salerno • Anzio — coastal & bocage engagements</div>
+            </div>
+            <div style="flex:1 1 220px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));padding:10px;border-radius:10px">
+              <strong>Normandy & France</strong>
+              <div style="font-size:13px;color:var(--muted);margin-top:6px">D-Day landings, hedgerows, breakout</div>
+            </div>
+            <div style="flex:1 1 220px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));padding:10px;border-radius:10px">
+              <strong>Netherlands & Ardennes</strong>
+              <div style="font-size:13px;color:var(--muted);margin-top:6px">Operation Market Garden • Battle of the Bulge (Cobra King relieved Bastogne)</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Key variants -->
+        <section class="section" style="margin-top:12px" aria-labelledby="variants">
+          <h2 id="variants">Key Variants for Modelers</h2>
+          <p class="meta">Popular 1/35 kits & signature features</p>
+
+          <div class="variants" role="list">
+            <article class="variant" role="listitem" aria-labelledby="v1">
+              <h3 id="v1">M4 / M4A1 (75 mm)</h3>
+              <p>Early production; ideal for North Africa & early Normandy scenes — classic angled hull.</p>
+            </article>
+
+            <article class="variant" role="listitem" aria-labelledby="v2">
+              <h3 id="v2">M4A3(76)W</h3>
+              <p>Upgraded 76 mm gun — improved anti-tank performance for mid/late war builds.</p>
+            </article>
+
+            <article class="variant" role="listitem" aria-labelledby="v3">
+              <h3 id="v3">M4A3E8 "Easy Eight"</h3>
+              <p>HVSS suspension + 76 mm gun — smooth look, late-war Europe & Korea usage.</p>
+            </article>
+
+            <article class="variant" role="listitem" aria-labelledby="v4">
+              <h3 id="v4">M4A3E2 "Jumbo"</h3>
+              <p>Heavy-armour assault tank — great for assault or urban ruin dioramas.</p>
+            </article>
+
+            <article class="variant" role="listitem" aria-labelledby="v5">
+              <h3 id="v5">Sherman Firefly</h3>
+              <p>British conversion with 17-pounder — long barrel, turret mods, and unique markings.</p>
+            </article>
+
+            <article class="variant" role="listitem" aria-labelledby="v6">
+              <h3 id="v6">(Modeling tip)</h3>
+              <p>Mix parts from kits to create theatre-specific configurations (guns, stowage, turret mods).</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- camo & painting -->
+        <section class="section" style="margin-top:12px" aria-labelledby="camo">
+          <h2 id="camo">Camouflage & Painting Schemes</h2>
+          <p class="meta">Common finishes & weathering ideas for accuracy and drama</p>
+
+          <div class="swatches" aria-hidden="false" aria-label="Paint swatches">
+            <div class="swatch" style="background:linear-gradient(180deg,#6d7c3a,#47522a)"><small>US Olive Drab</small></div>
+            <div class="swatch" style="background:linear-gradient(180deg,#8a6a4a,#4f3b28)"><small>Desert / Dust</small></div>
+            <div class="swatch" style="background:linear-gradient(180deg,#cfcfcf,#bdbcbc)"><small>Winter Whitewash</small></div>
+            <div class="swatch" style="background-image:linear-gradient(135deg,#2b3b3a 0,#5a4f43 40%, #2b3b3a 100%);"><small>British Firefly</small></div>
+          </div>
+
+          <ul style="margin-top:10px;font-size:13px;color:var(--muted);line-height:1.5">
+            <li><strong>US Olive Drab:</strong> Most common; early vs late shades vary — crews often smudged/obscured white stars.</li>
+            <li><strong>British Firefly Markings:</strong> Tactical numbers, divisional flashes, and distinct turret mods for the 17-pounder.</li>
+            <li><strong>Winter & Desert:</strong> Whitewash for Ardennes; faded, sand-covered schemes in North Africa — excellent for weathering practice.</li>
+          </ul>
+        </section>
+
+        <!-- diorama inspiration -->
+        <section class="section" style="margin-top:12px" aria-labelledby="diorama">
+          <h2 id="diorama">Diorama Inspiration</h2>
+          <p class="meta">Classic scenes that pair well with the Sherman</p>
+          <div class="ideas" role="list">
+            <div class="idea" role="listitem"><strong>Normandy hedgerows</strong><div style="color:var(--muted);font-size:13px;margin-top:6px">Mud, camo nets, and hedgerow-busting rubble.</div></div>
+            <div class="idea" role="listitem"><strong>North Africa desert</strong><div style="color:var(--muted);font-size:13px;margin-top:6px">Sun-bleached OD, dust layers, and soft sand bases.</div></div>
+            <div class="idea" role="listitem"><strong>Winter Ardennes</strong><div style="color:var(--muted);font-size:13px;margin-top:6px">Chipped whitewash, snow effects, and abandoned kit.</div></div>
+            <div class="idea" role="listitem"><strong>Urban ruins</strong><div style="color:var(--muted);font-size:13px;margin-top:6px">Smokey walls, rubble, and combined arms with infantry/half-tracks.</div></div>
+          </div>
+          <p style="margin-top:10px;color:var(--muted);font-size:13px">Shermans work well as centrepieces and pair naturally with Allied infantry & support vehicles.</p>
+        </section>
+
+        <footer>
+          <small>Sources: compiled historical summaries for modelers — production & operation facts commonly cited in WWII vehicle references.</small>
+        </footer>
+      </main>
+
+      <aside class="side" aria-labelledby="side-heading">
+        <div class="card" aria-labelledby="side-heading">
+          <h3 id="side-heading" style="margin:0 0 8px;color:var(--accent)">Quick Stats & Notes</h3>
+
+          <div class="stat"><span class="badge">First production</span><strong>Feb 1942</strong></div>
+          <div class="stat"><span class="badge">Designed</span><strong>1941</strong></div>
+          <div class="stat"><span class="badge">Produced</span><strong>>49,000</strong></div>
+
+          <div style="margin-top:8px">
+            <div style="font-size:12px;color:var(--muted);margin-bottom:6px">Late-war anti-tank upgrade</div>
+            <div class="bar" aria-hidden="true"><i style="width:68%"></i></div>
+          </div>
+
+          <hr style="border:none;height:1px;background:rgba(255,255,255,0.02);margin:12px 0;border-radius:2px">
+
+          <div style="font-size:13px;color:var(--muted)">
+            <strong>Modeler tips</strong>
+            <ul style="padding-left:18px;margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.5">
+              <li>Use mixed kits/aftermarket barrels for Firefly & 76 mm conversions.</li>
+              <li>Weather in thin layers — salt, filters and chipping for realism.</li>
+              <li>Base notes: include infantry + ammo crates to tell a story.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" aria-label="Reference card">
+          <h4 style="margin:0 0 8px;color:var(--accent)">SEO & Print Friendly</h4>
+          <p style="color:var(--muted);font-size:13px;margin:0 0 8px">This single-file HTML uses headings, meta tags, and semantic sections for crawlability. Remove or add <code>&lt;meta&gt;</code> geo tags to change local targeting.</p>
+
+          <div style="margin-top:8px">
+            <div style="font-size:12px;color:var(--muted);margin-bottom:6px">Export tip</div>
+            <div class="bar" aria-hidden="true"><i style="width:40%"></i></div>
+            <p style="color:var(--muted);font-size:12px;margin-top:6px">Print via browser or save as PDF for physical handouts.</p>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
